@@ -1,0 +1,3 @@
+[ 50%] Building CXX object CMakeFiles/SongMain.dir/song.cpp.o
+[100%] Linking CXX executable SongMain
+[100%] Built target SongMain
