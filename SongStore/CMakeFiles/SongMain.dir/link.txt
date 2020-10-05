@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/SongMain.dir/song.cpp.o  -o SongMain -rdynamic -Wl,-Bstatic -lgtest -Wl,-Bdynamic -lpthread 
