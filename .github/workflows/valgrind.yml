@@ -19,5 +19,5 @@ jobs:
         sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
     - name: make test
       run: |
-        g++ CPP_Mini_project-master/song.cpp -lpthread -o CPP_Mini_project-master/all.out
+        g++ CPP_Mini_project-master/songDb.cpp -lpthread -o CPP_Mini_project-master/all.out
         valgrind ./CPP_Mini_project-master/all.out
