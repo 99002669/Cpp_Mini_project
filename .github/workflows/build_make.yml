@@ -14,6 +14,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
-    - name: make all 
-      run:  make all -C SongStore/
-     
+    - name: make all
+      run:  make all -C Cpp_Mini_project-master/ 
