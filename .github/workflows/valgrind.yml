@@ -1,15 +1,23 @@
 name: Valgrind
 
+ 
+
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
 
+ 
+
 jobs:
   build:
 
+ 
+
     runs-on: ubuntu-latest
+
+ 
 
     steps:
     - uses: actions/checkout@v2
@@ -17,7 +25,12 @@ jobs:
       run: |
         sudo apt-get -y install valgrind
         sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
-    - name: make test
+    - name: Install Cunit
+      run: sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
+    - name: Install gtest manually
+      run: sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo make && sudo cp *.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
+    - name: make all
       run: |
-        g++ CPP_Mini_project-master/ -lpthread -o CPP_Mini_project-master/all.out
-        valgrind ./CPP_Mini_project-master/all.out
+       make all -C Medical/
+       chmod +x ./Medical/all.out
+       valgrind ./Medical/all.out
