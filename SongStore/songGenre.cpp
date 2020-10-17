@@ -9,7 +9,7 @@ SongGenre::SongGenre(int ID, std::string name, double price, std::string artist,
     Song(ID,name,price,artist),genre(genre),year(year) {
 }
 
-int SongGenre::getID() {
+int SongGenre::getID() { //trying to get the song details by accessing its ID 
     return ID;
 }
 std::string SongGenre::getGenre() {
