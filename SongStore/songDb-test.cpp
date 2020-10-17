@@ -20,8 +20,8 @@ void* efun1(void* pv) {
 
 
 
-    pthread_mutex_lock(&m1);
-
+    pthread_mutex_lock(&m1); // using linux concepts pthread_mutex
+ 
     songs.addSong(1,"Believer", 23.00, "Imagine Dragons", "Pop Rock","2017");
     songs.addSong(2,"Despacito", 30.00, "Luis Fonsi", "Latin Pop","2017");
     songs.addSong(3,"Barbie Girl", 25.00, "Aqua", "Bubblegum Pop","1997");
