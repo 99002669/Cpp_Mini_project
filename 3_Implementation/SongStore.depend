@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1601744988 source:c:\users\tejas\onedrive\desktop\songstore\song.cpp
+	"song.h"
+	<string>
+
+1601744867 c:\users\tejas\onedrive\desktop\songstore\song.h
+	<string>
+
+1601746024 source:c:\users\tejas\onedrive\desktop\songstore\songdb.cpp
+	"songGenre.h"
+	"song.h"
+	"songDb.h"
+	<string>
+	<list>
+	<iterator>
+	<thread>
+	<semaphore.h>
+	<iostream>
+
+1601745925 c:\users\tejas\onedrive\desktop\songstore\songgenre.h
+	<string>
+	"song.h"
+
+1601745114 c:\users\tejas\onedrive\desktop\songstore\songdb.h
+	<string>
+	<cstdint>
+	"song.h"
+	"songGenre.h"
+	<list>
+	<iterator>
+
+1601745975 source:c:\users\tejas\onedrive\desktop\songstore\songgenre.cpp
+	<string>
+	"song.h"
+	"songGenre.h"
+
+1601745349 source:c:\users\tejas\onedrive\desktop\songstore\songdb-test.cpp
+	"song.h"
+	"songGenre.h"
+	"songDb.h"
+	<gtest/gtest.h>
+	<iostream>
+	<pthread.h>
+	<semaphore.h>
+	<list>
+	<iterator>
+	<cstdint>
+
+1601744985 source:c:\users\tejas\onedrive\desktop\songstore\song-test.cpp
+	"song.h"
+	"songGenre.h"
+	"songDb.h"
+	<gtest/gtest.h>
+
