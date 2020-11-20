@@ -37,8 +37,7 @@ while IFS="," read  Name EmailID Repolink; do
        lastline="$( tail -n 1 "$mydirectory"/valgrind.txt)"
        errors="$(cut -d" " -f4 <<<"$lastline")"
        echo -n "$errors," >>"$mydirectory"/Results.csv
-
-       cppcheck *.c* >"$mydirectory"/cppreport.txt 2>&1
+       cppcheck ./*.c* >"$mydirectory"/cppreport.txt 2>&1
        echo "$(grep -o 'error' "$mydirectory"/cppreport.txt| wc -l)" >>"$mydirectory"/ShellReport.csv
 	
        cd "$mydirectory" 
