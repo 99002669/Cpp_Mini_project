@@ -43,7 +43,7 @@ while IFS="," read  Name EmailID Repolink; do
        cd "$mydirectory" 
        IFS=$OLDFIS
  	
-done<$1
+done<"$1"
 
  
  
