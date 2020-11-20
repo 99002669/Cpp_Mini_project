@@ -1,11 +1,12 @@
 #include <string>
 #include "song.h"
 #include "songGenre.h"
+using namespace std;
 
 SongGenre::SongGenre():Song(),genre(""),
     year("") {}
 
-SongGenre::SongGenre(int ID, std::string name, double price, std::string artist,std::string genre,std::string year):
+SongGenre::SongGenre(int ID, const std::string name, double price, std::string artist,std::string genre,std::string year):
     Song(ID,name,price,artist),genre(genre),year(year) {
 }
 
