@@ -8,7 +8,7 @@ while IFS="," read  Name EmailID Repolink; do
 
 	echo "$Name $EmailID $Repolink" 
 	
-	git clone $Repolink >>"$mydirectory"/gitclone.txt
+	git clone "$Repolink" >>"$mydirectory"/gitclone.txt
 	if [ $? -eq 0 ];then
   		echo -n "$Name,$EmailID,$Repolink,Pass," >>"$mydirectory"/ShellReport.csv
   		
