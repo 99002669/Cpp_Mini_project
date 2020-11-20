@@ -12,7 +12,7 @@ void SongDb::addSong(int ID, const std::string name, double price, std::string a
     sg.push_back(SongGenre(ID, name, price, artist, genre, year));
 }
 
-void SongDb::removeSong(std::string name) { //removing song from the playlist
+void SongDb::removeSong(const std::string name) { //removing song from the playlist
     std::list<SongGenre> :: iterator iter;
     for(iter=sg.begin(); iter!=sg.end(); ++iter) {
         if(iter->getName()== name) {
