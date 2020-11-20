@@ -7,8 +7,8 @@
 #include <thread>
 #include <semaphore.h>
 #include <iostream>
-
-void SongDb::addSong(int ID, std::string name, double price, std::string artist,std::string genre, std::string year) {
+using namespace std;
+void SongDb::addSong(int ID, const std::string name, double price, std::string artist,std::string genre, std::string year) {
     sg.push_back(SongGenre(ID, name, price, artist, genre, year));
 }
 
