@@ -14,7 +14,7 @@ void SongDb::addSong(int ID, std::string name, double price, std::string artist,
 
 void SongDb::removeSong(std::string name) { //removing song from the playlist
     std::list<SongGenre> :: iterator iter;
-    for(iter=sg.begin(); iter!=sg.end(); iter++) {
+    for(iter=sg.begin(); iter!=sg.end(); ++iter) {
         if(iter->getName()== name) {
             sg.erase(iter);
             break;
