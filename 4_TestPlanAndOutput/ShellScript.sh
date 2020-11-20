@@ -1,5 +1,5 @@
 #!/bin/bash
-// OLDIFS=$IFS
+OLDIFS="$IFS"
 touch ShellReport.csv
 mydirectory="$(pwd)"
 echo "User-Name,EId,Repo-link,Git-clone status,Build-status,Valgrind,cppcheck" >>"$mydirectory"/ShellReport.csv
